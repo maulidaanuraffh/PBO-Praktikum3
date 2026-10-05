@@ -102,5 +102,32 @@ public class Main {
         p3.ringkasan();
         System.out.println();
         p4.ringkasan();
+
+        // ============================================================
+        // CHALLENGE A — Relationship uses-a dengan Kasir
+        // ============================================================
+        System.out.println();
+        System.out.println("=== Challenge A: uses-a dengan Kasir ===");
+
+        // Kasir = CLASS | kasir1 = OBJECT/INSTANCE
+        // Kasir punya state sendiri (namaKasir)
+        // tapi TIDAK menyimpan Pesanan sebagai field
+        Kasir kasir1 = new Kasir("Budi");
+        Kasir kasir2 = new Kasir("Ani");
+
+        System.out.println();
+        System.out.println("-- Kasir " + kasir1.getNamaKasir() + " memproses --");
+        kasir1.proses(p1);
+        System.out.println();
+        kasir1.proses(p2); 
+        System.out.println();
+        kasir1.proses(p3); 
+
+        System.out.println();
+        System.out.println("-- Kasir " + kasir2.getNamaKasir() + " mencetak struk --");
+        kasir2.cetakStruk(p1);
+        System.out.println();
+        kasir2.cetakStruk(p2);
+
     }
 }
